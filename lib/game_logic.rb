@@ -20,9 +20,17 @@ class GameLogic
     end
     true
   end
+
+  def board_full?
+    return false if board.grid.any? { |cell| cell.is_a?(Integer)}
+    true 
+  end
+
 end
 
 my_game = GameLogic.new('X', 'O', 'BOARD')
 
 p my_game.valid_move? 5
 p my_game.valid_move? 10
+
+
