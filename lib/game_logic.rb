@@ -13,7 +13,7 @@ class GameLogic
   end
 
   def valid_move?(user_input)
-    unless user_input.is_a?(Integer) && ((user_input <= 9) && (user_input.positive?)) && !@@options.include?(user_input)
+    unless user_input.is_a?(Integer) && ((user_input <= 9) && user_input.positive?) && !@@options.include?(user_input)
       puts 'Wrong Input, Enter 1..9'
       return false
 
@@ -23,56 +23,52 @@ class GameLogic
 
   def board_full?
     return false if board.grid.any? { |cell| cell.is_a?(Integer) }
+
     true
   end
 
   def game_play
     @board.display
 
-    puts "Enter name for player 1"
-    @play1 = gets.chomp.to_s.capitalize
-    play1_id = "X"
+    
+    play1_id = 'X'
 
-    puts "Enter name for player 2"
-    @play2 = gets.chomp.to_s.capitalize
-    play2_id = "O"
+    play2_id = 'O'
 
     a = 0
     until board_full?
       @board.display
       option = 0
 
-      current_player = a.even? ? play1 : play2
-      
+      current_player = a.even? ? play1_id : play2_id
+
       loop do
         puts " #{current_player} , select an option from 1..9"
         option = gets.chomp.to_i
 
         break if valid_move? option
-
       end
-      
+
       char = (a.even? ? play1_id : play2_id).to_s
-      @board.grid[option-1] = char if @board.grid.include? option
+      @board.grid[option - 1] = char if @board.grid.include? option
 
       @@Wins = @@Wins.each do |moves|
         moves[moves.find_index(option)] = char if moves.include? option
 
-        if Set.new(moves).length == 1
-          puts "Game Over!"
-          puts " #{current_player} Wins!"
-          board.display
-          return
-        end
+        next unless Set.new(moves).length == 1
+
+        puts 'Game Over!'
+        puts " #{current_player} Wins!"
+        board.display
+        return
       end
       @@options.push(option)
-      a += 1 
+      a += 1
     end
     board.display
-    puts "Board Full"
-    puts "Its a tie (DRAW)"
+    puts 'Board Full'
+    puts 'Its a tie (DRAW)'
   end
-  
 end
 
 my_game = GameLogic.new('X', 'O', 'BOARD')
