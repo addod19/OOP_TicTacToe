@@ -1,7 +1,7 @@
 # Milestone1 Project Setup
 
 
-## This project is setup with two folders :
+## This project is setup with linters and two folders :
 1. lib
 2. bin
 
@@ -15,3 +15,7 @@ remote school for software developers.
 
 [Maya88en](https://www.github.com/maya88en)
 [Daniel Larbi Addo](https://www.github.com/addod19)
+<<<<<<< HEAD
+=======
+
+>>>>>>> project_setup
