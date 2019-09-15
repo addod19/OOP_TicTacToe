@@ -13,9 +13,5 @@ remote school for software developers.
 
 ## Collaborators:
 
-[Maya88en](https://www.github.com/maya88en)
-[Daniel Larbi Addo](https://www.github.com/addod19)
-<<<<<<< HEAD
-=======
-
->>>>>>> project_setup
+1. [Maya88en](https://www.github.com/maya88en)
+2. [Daniel Larbi Addo](https://www.github.com/addod19)
