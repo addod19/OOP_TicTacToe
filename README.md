@@ -15,4 +15,3 @@ remote school for software developers.
 
 1. [Maya88en](https://www.github.com/maya88en)
 2. [Daniel Larbi Addo](https://www.github.com/addod19)
-
