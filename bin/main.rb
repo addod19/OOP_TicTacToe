@@ -1,25 +1,20 @@
-puts "welcome to tictactoe game"
+require_relative '../lib/game'
+require_relative '../lib/player'
+require_relative '../lib/board'
 
-puts "what kind of game would like to play?Please choose player-mode"
+puts "Welcome to Tic Tac Toe Game"
 
-player_mode = gets.strip
+puts "This game is played by 2 players, player1 uses 'X' and player2 uses 'O'"
 
-if player_mode == "1"
-  puts "Do you want to go first? [y/ n]"
-  if gets.strip == "y"
-    Game.new(Players::Human.new("X"), Players::Computer.new("O"), Board.new).play
-  else   Game.new(Players::Computer.new("X"), Players::Human.new("O"), Board.new).play
-  end
+puts "Enter name for player 1"
+player1 = gets.strip.capitalize.to_s
 
-elsif player_mode == "0"
-  Game.new(Players::Computer.new("X"), Players::Computer.new("O"), Board.new).play
+puts "Enter name for player 2"
+player2 = gets.strip.capitalize.to_s
 
-elsif player_mode == "2"
-  Game.new(Players::Human.new("X"), Players::Human.new("O"), Board.new).play
-end
 puts "Would like to play again? [y/ n]"
 
 
 
-game_start until gets.strip == "n"
+
 
