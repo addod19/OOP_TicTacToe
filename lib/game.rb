@@ -56,7 +56,6 @@ class Game
     unless user_input.is_a?(Integer) && ((user_input <= 9) && user_input.positive?) && !@options.include?(user_input)
       puts 'Wrong Input, Enter 1..9'
       return false
-
     end
     true
   end
