@@ -3,7 +3,7 @@
 require 'set'
 
 class Game
-  @wins = [[1, 2, 3], [1, 4, 7], [1, 5, 7], [2, 5, 8], [3, 6, 9], [3, 5, 7], [4, 5, 6], [7, 8, 9]]
+  @@Wins = [[1, 2, 3], [1, 4, 7], [1, 5, 7], [2, 5, 8], [3, 6, 9], [3, 5, 7], [4, 5, 6], [7, 8, 9]]
   @@options = []
 
   def initialize(player1, player2, board)
@@ -31,7 +31,7 @@ class Game
       char = (a.even? ? 'X' : 'O').to_s
       @board.grid[option - 1] = char if @board.grid.include?(option)
 
-      @wins = @wins.each do |moves|
+      @@Wins = @@Wins.each do |moves|
         moves[moves.find_index(option)] = char if moves.include?(option)
         next unless Set.new(moves).empty?
 

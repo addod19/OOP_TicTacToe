@@ -1,6 +1,6 @@
 require_relative '../lib/game'
 require_relative '../lib/player'
-require_relative '../lib/board'
+
 
 # frozen_string_literal: true
 
@@ -52,13 +52,3 @@ end
 Game.new(player1, player2, board).game_start
 
 puts "Would like to play again? [y/ n]"
-
-
-
-
-
-
-
-
-
-
