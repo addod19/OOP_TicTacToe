@@ -1,10 +1,11 @@
 # frozen_string_literal: true
 
-class Players
-  attr_accessor :name, :symbol
+class Player
+  attr_reader :name, :marker
+  attr_writer :name
 
-  def initialize(name, symbol)
+  def initialize(marker, name = 'Player')
+    @marker = marker
     @name = name
-    @symbol = symbol
   end
 end
