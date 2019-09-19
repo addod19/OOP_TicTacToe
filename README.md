@@ -1,4 +1,4 @@
-# Milestone1 Project Setup
+# Milestone2 User Interface
 
 
 ## This project is setup with linters and two folders :
