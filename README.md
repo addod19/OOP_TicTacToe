@@ -16,8 +16,8 @@
 
 4. When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.
 
+![tictactoe](https://user-images.githubusercontent.com/50522273/65238556-c1ea9480-da91-11e9-9cfa-419906791309.png)
 
-<img src="../assets/img.jpg" alt="TicTacToe image">
 
 ## HOW CAN I WIN AT TIC-TAC-TOE?
 
