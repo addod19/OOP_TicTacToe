@@ -4,7 +4,6 @@ require_relative '../lib/game'
 require_relative '../lib/board'
 require_relative '../lib/player'
 
-
 loop do
   system 'clear'
   game = Game.new
@@ -19,7 +18,6 @@ loop do
   game.player1.name = player_names[0]
   game.player2.name = player_names[1]
 
-  
   loop do
     game.switch_player
     system 'clear'
@@ -45,4 +43,8 @@ loop do
 
   print 'Would you like to play again? (y/n): '
   break unless gets.chomp.downcase.start_with?('y')
+
 end
+
+end
+
