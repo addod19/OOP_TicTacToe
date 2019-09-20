@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Game
   attr_accessor :player1, :player2
   attr_reader :current_player, :board

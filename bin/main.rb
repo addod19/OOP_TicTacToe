@@ -45,6 +45,3 @@ loop do
   break unless gets.chomp.downcase.start_with?('y')
 
 end
-
-end
-
