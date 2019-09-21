@@ -4,8 +4,6 @@ require_relative '../lib/game'
 require_relative '../lib/board'
 require_relative '../lib/player'
 
-# Main game loop
-# rubocop:disable Metrics/BlockLength
 loop do
   system 'clear'
   game = Game.new
@@ -17,10 +15,9 @@ loop do
     player_names << gets.chomp
   end
 
-  game.player1.name = player_names[0]
-  game.player2.name = player_names[1]
+  player1 = Player.new(player_names[0])
+  player2 = Player.new(player_names[1])
 
-  # Player turn loop
   loop do
     game.switch_player
     system 'clear'
@@ -46,4 +43,5 @@ loop do
 
   print 'Would you like to play again? (y/n): '
   break unless gets.chomp.downcase.start_with?('y')
+
 end
