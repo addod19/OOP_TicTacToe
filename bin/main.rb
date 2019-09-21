@@ -15,8 +15,8 @@ loop do
     player_names << gets.chomp
   end
 
-  game.player1.name = player_names[0]
-  game.player2.name = player_names[1]
+  player1 = Player.new(player_names[0])
+  player2 = Player.new(player_names[1])
 
   loop do
     game.switch_player
