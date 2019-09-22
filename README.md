@@ -54,4 +54,29 @@ remote school for software developers.
 2. [Daniel Larbi Addo](https://www.github.com/addod19)
 
 
+## How to play Tic Tac Toe in terminal
+
+> Clone the repository to your local machine
+
+```sh
+$ git clone https://github.com/addod19/OOP_TicTacToe.git
+```
+> open  your terminal
+
+> cd into the directory
+
+```sh
+$ cd OOP_TicTacToe
+```
+> run ruby bin/main.rb
+
+```sh
+$ ruby bin.main.rb
+```
+
+You will be asked to enter your name, there the game begins. Follow the instructions on the terminal.
+Have fun enjoying the game
+
+
+
 
